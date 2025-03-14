@@ -26,3 +26,12 @@ echo "a = 10; b = 5 + a * 2; c = (b - 3) / 2;" | java -cp ".:$ANTLR_JAR" org.ant
 $ echo "a = 10; b = 5 + a * 2; c = (b - 3) / 2;" | java -cp ".:$ANTLR_JAR" org.antlr.v4.gui.TestRig MiGramatica programa -tree
 
 (programa (expresion a = (expresion 10)) ; (expresion (expresion b = (expresion 5)) + (expresion (expresion a) * (expresion 2))) ; (expresion (expresion c = (expresion ( (expresion (expresion b) - (expresion 3)) ))) / (expresion 2)) ;)
+
+¿Cómo se representan los operadores +, -, * y / en los tokens generados?
+b) Como operadores aritméticos específicos
+
+¿Qué estructura sigue el árbol de análisis sintáctico generado por ANTLR4 para la expresión b = 5 + a * 2;?
+a) b es el nodo raíz y las operaciones se agrupan en niveles inferiores según su prioridad.
+
+¿Por qué es importante visualizar los tokens y el árbol de análisis en el proceso de compilación?
+d) Todas las anteriores.
